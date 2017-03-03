@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <defaultUrl>index.html;index.htm</defaultUrl>
+    <!-- Connection string setting -->
+    <connStrings>
+        <add name="core" type="mongodb" connString="mongodb://localhost"/>
+        <add name="master" type="mongodb" connString="mongodb://localhost"/>
+        <add name="web" type="mongodb" connString="mongodb://localhost"/>
+    </connStrings>
+    <!-- Application setting -->
+    <settings>
+        <add key="DebugMode" value="true" />
+    </settings>
+    <session manager="memory" cookieName="Session_ID" enableSetCookie="true" sessionIDLength="32" />
+</configuration>

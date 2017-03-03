@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Index</td>
+                <td>Name</td>
+                <td>Type</td>
+                <td>ID</td>
+                <td>Create Time</td>
+                <td>Created By</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{range $i,$e := .Children}}
+            <tr>
+                <td>{{$i}}</td>
+                <td>{{$e.Name}}</td>
+                <td>{{$e.Type}}</td>
+                <td>{{$e.Id}}</td>
+                <td>{{$e.CreateTime}}</td>
+                <td>{{$e.CreatedBy}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

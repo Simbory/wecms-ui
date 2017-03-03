@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Template Entry</title>
+</head>
+<body>
+    <form method="post">
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" value="" id="name" name="Name" />
+        </p>
+        <p>
+            <label for="type">Type:</label>
+            <select name="Type" id="type">
+                <option value="Folder">Folder</option>
+                <option value="Template">Template</option>
+            </select>
+        </p>
+        <p>
+            <label for="parent">Parent ID:</label>
+            <input type="text" readonly value="{{.parent}}" id="parent" name="Container" />
+        </p>
+        <input type="hidden" value="Simbory" name="CreatedBy">
+        <input type="hidden" value="Simbory" name="UpdatedBy">
+        <button type="submit">Create Template Entry</button>
+    </form>
+</body>
+</html>

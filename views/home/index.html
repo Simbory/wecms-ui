@@ -1,0 +1,14 @@
+{{define "PageTitle"}}Homepage{{end}}
+
+{{define "Head"}}{{end}}
+
+{{define "Body"}}
+    <div class="jumbotron" style="min-height: 300px;"></div>
+    <h1>{{.Message}}</h1>
+{{end}}
+
+{{define "Scripts"}}
+    <script src="/content/js/home.js"></script>
+{{end}}
+
+{{template "shared/layout.html" .}}
