@@ -1,0 +1,42 @@
+{{define "title"}}Login | WEVMS content repository manager{{end}}
+
+{{define "head"}}<link rel="stylesheet" href="/wecms/content/css/login.css">{{end}}
+
+{{define "body"}}
+<div class="login">
+    <div class="login-main-wrap">
+        <div class="login-box">
+            <div class="html ui top attached segment">
+                {{if .errorMsg}}
+                {{set_viewBag . "error" " error"}}
+                {{else}}
+                {{set_viewBag . "error" ""}}
+                {{end}}
+                <form action="" method="post" class="ui form form-login{{.error}}">
+                    <div class="field{{.error}}">
+                        <label>Forget your password? Input your email here:</label>
+                        <input type="text" name="email" placeholder="Email" value="{{get_form .Request "email"}}">
+                    </div>
+                    <div class="field">
+                        <button class="ui primary button" type="submit" style="width: 100%">Submit</button>
+                    </div>
+                    {{if .errorMsg}}
+                    <div class="ui error message">
+                        <ul class="list">
+                            <li>{{.errorMsg}}</li>
+                        </ul>
+                    </div>
+                    {{end}}
+                </form>
+                <div class="ui top attached label">
+                    WECMS —— The flexible content repository written in go language
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
+
+{{define "script"}}{{end}}
+
+{{template "shared/__viewStart.html" .}}

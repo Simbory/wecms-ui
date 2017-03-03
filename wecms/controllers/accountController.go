@@ -30,3 +30,21 @@ func (ctrl AccountController) PostLogin() interface{} {
 	})
 	return ctrl.Redirect(returnUrl)
 }
+
+func (ctrl AccountController) GetForgetPwd() interface{} {
+	return ctrl.View()
+}
+
+func (ctrl AccountController) PostForgetPwd() interface{} {
+	email := ctrl.Request().FormValue("email")
+	if len(email) == 0 {
+		ctrl.ViewData["errorMsg"] = "Please input your email address"
+	} else {
+		core := wecms.GetRepository("core")
+		if core == nil {
+			ctrl.ViewData["errorMsg"] = "System error! Please try again later."
+		} else {
+		}
+	}
+	return ctrl.View()
+}
