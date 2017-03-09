@@ -21,7 +21,7 @@
             {{range $i,$e := .Children}}
             <tr>
                 <td>{{$i}}</td>
-                <td>{{$e.Name}}</td>
+                <td><a href="/wecms/template/children/{{$e.Id}}">{{$e.Name}}</a></td>
                 <td>{{$e.Type}}</td>
                 <td>{{$e.Id}}</td>
                 <td>{{$e.CreateTime}}</td>
